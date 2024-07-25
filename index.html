@@ -1,0 +1,41 @@
+<html>
+    <head>
+         <title> Palindrome Checker App by Manasvi </title>
+         <style>
+              * { font-size:50px; font-family: Cambria;}
+                body{ background-color: azure;}
+          </style>
+    </head>
+    <body>
+         <center>
+               <h1> Palindrome Checker App </h1>
+               <form onsubmit = "show()">
+               <input type="text"  id="str"  placeholder="enter  string"/>
+                             <br/><br/> 
+               
+                            <input type="submit" value="check"/>
+                            
+                            
+
+
+                              </form>
+                     <h2 id="msg"/>
+               <script>
+                   function show()
+                   {
+                         
+                       event.preventDefault();
+                       let str=document.getElementById("str");
+                       let msg=document.getElementById("msg");
+                       let s=str.value;
+                       let rs=s.split("").reverse().join("");
+
+                       if(s===rs)
+                            msg.innerHTML="yes";
+                       else
+                            msg.innerHTML="no";
+                      }
+                 </script>
+            </center>
+       </body>
+</html>
